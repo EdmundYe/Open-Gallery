@@ -1,0 +1,44 @@
+html
+    head 
+        title Switch
+    body 
+        include partials/header.pug
+        include partials/loginChecker.pug
+        h1 Change to Artist
+        p Please add you artwork to register as an artist
+        br
+        div
+            p Title
+            input(type='text' name='title' id='title')
+            p Year
+            input(type='text' name='year' id='year')
+            p Category
+            input(type='text' name='category' id='category')
+            p Medium 
+            input(type='text' name='medium' id='medium')
+            p Descrption 
+            input(type='text' name='description' id='description')
+            p Poster 
+            input(type='text' name='poster' id='poster')
+            br
+        button#switch(type="button" onclick="switchToArtist()") Switch
+        script(src="/js/patronSwitch.js")
+        style.
+            body {
+                background-color: #8FBC8F;
+            }
+            h1 {
+                text-align: center;
+                height: 100px;
+            }
+            p {
+                text-align: center;
+            }
+            button {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+            input {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }

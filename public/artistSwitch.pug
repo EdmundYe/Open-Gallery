@@ -1,0 +1,28 @@
+html
+    head 
+        title Switch
+    body 
+        include partials/artistHeader.pug
+        include partials/loginChecker.pug
+        h1 Change to Patron
+        button#switch(type="button" onclick="switchToPatron()") Switch
+        script(src="/js/artistSwitch.js")
+        style.
+            body {
+                background-color: #8FBC8F;
+            }
+            h1 {
+                text-align: center;
+                height: 100px;
+            }
+            p {
+                text-align: center;
+            }
+            button {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+            input {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }

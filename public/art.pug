@@ -1,0 +1,48 @@
+html 
+    head 
+        title Art
+    body(onload="loadReviews()")
+        include partials/header.pug
+        include partials/loginChecker.pug
+        img(src=art.Poster alt="Poster" width="600px" height="400px" )
+        input(id="id" type="hidden" name="id" value=art["_id"])
+        p Name: #{art.Title}
+        p Artist:
+            a(href="/artists/" + art.Artist)= art.Artist
+        p Year: #{art.Year}
+        p Category: #{art.Category}
+        p Medium: #{art.Medium}
+        p Keywords: #{art.Title}, #{art.Artist}, #{art.Category}
+        p Description: #{art.Description}
+        p Likes: #{art.Likes}
+        p Reviews:
+            ul#review-list
+                li Loading...
+        p Leave a review:
+            textarea(id="review" name="review")
+        button(type="button" onclick="reviewArt()") Review
+        button(type="button" onclick="likeArt()") Like
+        script(src="/js/likeArt.js")
+        style.
+            body {
+                background-color: #8FBC8F;
+            }
+            img {
+                margin-left: 50%;
+                transform: translateX(-50%);
+                height: 50vh;
+            }
+            p {
+                text-align: center;
+            }
+            ul {
+                list-style-type: none;
+                margin-left: 50%;
+                padding: 0;
+                text-align: left;
+                font-size: 20px;
+            }
+            button {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }

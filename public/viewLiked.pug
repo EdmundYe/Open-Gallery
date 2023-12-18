@@ -1,0 +1,24 @@
+html
+    head 
+        title Liked art
+    body 
+        include partials/header.pug
+        include partials/loginChecker.pug
+        h1 Here are the art pieces you liked:
+        br
+        ul#liked-list
+            li Loading...
+        script(src="/js/viewLiked.js" type="text/javascript")
+        style.
+            body {
+                background-color: #8FBC8F;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                display: inline-block;
+                text-align: center ;
+                font-size: 50px;
+            }

@@ -1,0 +1,24 @@
+html 
+    head 
+        title Following
+    body(onload="followingMain()")
+        include partials/header.pug
+        include partials/loginChecker.pug
+        h1 Here are the artists you are following:
+        br
+        ul#following-list
+            li Loading...
+        script(src="/js/following.js" type="text/javascript")
+        style.
+            body {
+                background-color: #8FBC8F;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                display: inline-block;
+                text-align: left;
+                font-size: 50px;
+            }

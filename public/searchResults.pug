@@ -1,0 +1,6 @@
+
+h1 Results
+ul
+	each artPiece in artList
+		li
+			a(href="/art/" + artPiece["_id"])= artPiece.Title

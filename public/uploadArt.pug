@@ -1,0 +1,28 @@
+html
+    head 
+        title Upload art
+    body
+        include partials/artistHeader.pug
+        include partials/loginChecker.pug
+        h1 Upload artwork
+        br
+        div
+            p Title
+            input(type='text' name='title' id='title')
+            p Year
+            input(type='text' name='year' id='year')
+            p Category
+            input(type='text' name='category' id='category')
+            p Medium 
+            input(type='text' name='medium' id='medium')
+            p Descrption 
+            input(type='text' name='description' id='description')
+            p Poster 
+            input(type='text' name='poster' id='poster')
+            br
+        button#add(type="button" onclick="uploadArt()") Add
+        script(src='/js/uploadArt.js')
+        style.
+            body {
+                background-color: #8FBC8F;
+            }

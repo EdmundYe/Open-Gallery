@@ -1,0 +1,38 @@
+html 
+    head 
+        title Artist
+    body 
+        include partials/header.pug
+        include partials/loginChecker.pug
+        h1=artist.Artist 
+        button(type="button" onclick=`follow('${artist.Artist}')`) Follow
+        br
+        h2 Artwork: 
+        ul
+            each artwork in artist.Art ? artist.Art : ["No artwork available"]
+                li
+                    a(href="/artByName/" + artwork)= artwork
+        br
+        h2 Workshops 
+        ul
+            each workshop in artist.Workshops ? artist.Workshops : ["No workshops available"]
+                li
+                    p=workshop
+        br
+        script(src="/js/artist.js")
+        style.
+            body {
+                background-color: #8FBC8F;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;s
+                overflow: hidden;
+                display: inline-block;
+                font-size: 30px;
+            }
+            button {
+                margin-left: 3%;
+                transform: translateX(-50%);
+            }

@@ -1,0 +1,17 @@
+html 
+    head 
+        title Add workshops
+    body 
+        include partials/artistHeader.pug
+        include partials/loginChecker.pug
+        h1 Add a workshop
+        br
+        div
+            p Title
+            input(type='text' name='title' id='title')
+        button#switch(type="button" onclick="uploadWorkshop()") Upload
+        script(src='/js/uploadWorkshop.js')    
+        style.
+            body {
+                background-color: #8FBC8F;
+            }

@@ -1,0 +1,41 @@
+html
+    head 
+        title Search for art
+    body(body onload="init()")
+        script(src="/js/artQuery.js")
+        include partials/header.pug
+        h1 Search for art
+        p Title 
+        input#title(type="textbox")
+        p Artist
+        input#artist(type="textbox")
+        p Category 
+        input#category(type="textbox")
+        br
+        button#search(type="button") Search
+        div#results
+        style.
+            body {
+                background-color: #8FBC8F;
+            }
+            h1 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+            button {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+            input {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+            ul {
+                margin-left: 61%;
+                transform: translateX(-50%);
+                list-style-type: none;
+                height: 50vh;
+            }
+        

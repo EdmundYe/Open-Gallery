@@ -1,0 +1,49 @@
+html
+    head
+        title User
+    body
+        include partials/userPageHeader.pug
+        include partials/loginChecker.pug
+        h1 Welcome 
+        br
+        div #{list}
+            ul
+                li
+                    a(href='/switchToPatron') Switch account type
+                br
+                li
+                    a(href='/viewLiked') View liked art
+                br
+                li
+                    a(href='/notifications') View notifications
+                br
+                li
+                    a(href='/search') Search for art
+                br
+                li
+                    a(href='/following') Following
+                br
+                li
+                    a(href='/upload') Upload art
+                br
+                li 
+                    a(href='/addWorkshop') Add workshops
+        style.
+            body {
+                background-color: #8FBC8F;
+            }
+            h1 {
+                text-align: center;
+            }
+            div{
+                text-align: center;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                display: inline-block;
+                text-align: left;
+                font-size: 30px;
+            }
